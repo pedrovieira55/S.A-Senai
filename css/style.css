@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+h1 span {
+    color: #2ecc71;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.btn-entrar {
+    display: inline-block;
+    padding: 20px 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #121212;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    text-decoration: none;
+}
+
+.btn-entrar:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.8rem;
+    color: #444;
+}
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Joga o vídeo para trás de tudo */
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir a tela sem esticar */
+}
+
+/* Camada escura para o texto ficar legível */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Escurece o vídeo em 60% */
+}
+
+/* Garante que o conteúdo principal fique por cima */
+main {
+    position: relative;
+    z-index: 1;
+}
